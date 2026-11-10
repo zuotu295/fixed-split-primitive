@@ -1,0 +1,277 @@
+{
+  "network": "Stable Studionet",
+  "chainId": 61999,
+  "rpcUrl": "https://studio.genlayer.com/api",
+  "contractAddress": "0x1294911238B306a61Eef05f5f9DedBBF3f32709e",
+  "deployTxHash": "0xcae7d218c583a325bff2401cbb2b3832bf355d8f3da498e1eee610a42ef53a3d",
+  "contractFile": "contracts/fixed_split.py",
+  "contractSha256": "4862a88229dcb84fd1dbc3608aa0dba8a94ee4ea9c83dc73cee60ef7f92bd04c",
+  "deployedCodeSha256": "4862a88229dcb84fd1dbc3608aa0dba8a94ee4ea9c83dc73cee60ef7f92bd04c",
+  "deployedCodeMatchesSource": true,
+  "accounts": {
+    "creator": "0x561A8219870afFB1D560634f1D1ae37fa6DFC622",
+    "a": "0xDac94B00B4DcB97b442afa542d4449A1b32CaF39",
+    "b": "0xeE166E804f87af742511479CA34499560cc98fFe",
+    "c": "0xDD349f737f84F48de34Ba1278CE960D88Be684CA"
+  },
+  "funding": {
+    "creator": {
+      "address": "0x561A8219870afFB1D560634f1D1ae37fa6DFC622",
+      "funded_gen": 10000,
+      "fundTx": "0xc9dc14bf260d9ed644afc8b364a6bd7aff2b1dd7963a4fd7a39a84c61b699ea1",
+      "balance_after_wei": "10000000000000000000000"
+    },
+    "a": {
+      "address": "0xDac94B00B4DcB97b442afa542d4449A1b32CaF39",
+      "funded_gen": 10000,
+      "fundTx": "0x362c2bd93928ea8967729c337afab378a23b36789d418ce3dfd9fc3de2cb98cb",
+      "balance_after_wei": "10000000000000000000000"
+    },
+    "b": {
+      "address": "0xeE166E804f87af742511479CA34499560cc98fFe",
+      "funded_gen": 10000,
+      "fundTx": "0x316e8a9093ae524be204e88356c462a4ba03a0a6ee8da7222422d7de4aec7d86",
+      "balance_after_wei": "10000000000000000000000"
+    },
+    "c": {
+      "address": "0xDD349f737f84F48de34Ba1278CE960D88Be684CA",
+      "funded_gen": 10000,
+      "fundTx": "0x99469da5c8e4d97d32a7eaf5dd56a7dc218fe357837f9f93b1b65217de16a54d",
+      "balance_after_wei": "10000000000000000000000"
+    }
+  },
+  "splits": [
+    {
+      "id": "0x561a8219870affb1d560634f1d1ae37fa6dfc622:0",
+      "shares": [
+        50,
+        30,
+        20
+      ],
+      "funded_wei": "100000000000000000000",
+      "expected_distribution_wei": [
+        "50000000000000000000",
+        "30000000000000000000",
+        "20000000000000000000"
+      ],
+      "remainder_wei": "0",
+      "remainder_to": "0xdac94b00b4dcb97b442afa542d4449a1b32caf39",
+      "tampered_vector_wei": [
+        "49000000000000000000",
+        "31000000000000000000",
+        "20000000000000000000"
+      ],
+      "tampered_error": "DISTRIBUTION_MISMATCH",
+      "createTxHash": "0x487a1dc8694e621fc85cf0cbf646976f977e84437adfc3640a60b5bb40e3e2cc"
+    },
+    {
+      "id": "0x561a8219870affb1d560634f1d1ae37fa6dfc622:1",
+      "shares": [
+        1,
+        1,
+        1
+      ],
+      "funded_wei": "100000000000000000000",
+      "expected_distribution_wei": [
+        "33333333333333333334",
+        "33333333333333333333",
+        "33333333333333333333"
+      ],
+      "remainder_wei": "1",
+      "remainder_to": "0xdac94b00b4dcb97b442afa542d4449a1b32caf39",
+      "createTxHash": "0x641c020dc4450bf1f7a5ca1f19336a814c8020a7211d5aa31b48178d0875a86c"
+    }
+  ],
+  "transactions": [
+    {
+      "label": "create-S0-50-30-20",
+      "method": "create_split",
+      "args": [
+        "[\"0xdac94b00b4dcb97b442afa542d4449a1b32caf39\",\"0xee166e804f87af742511479ca34499560cc98ffe\",\"0xdd349f737f84f48de34ba1278ce960d88be684ca\"]",
+        "[50,30,20]"
+      ],
+      "sender": "0x561A8219870afFB1D560634f1D1ae37fa6DFC622",
+      "value_wei": "0",
+      "txHash": "0x487a1dc8694e621fc85cf0cbf646976f977e84437adfc3640a60b5bb40e3e2cc",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "expected_error": null,
+      "stderr_excerpt": "0x561a8219870affb1d560634f1d1ae37fa6dfc622:0"
+    },
+    {
+      "label": "fund-S0-100-GEN",
+      "method": "fund",
+      "args": [
+        "0x561a8219870affb1d560634f1d1ae37fa6dfc622:0"
+      ],
+      "sender": "0x561A8219870afFB1D560634f1D1ae37fa6DFC622",
+      "value_wei": "100000000000000000000",
+      "txHash": "0x63c8b369da4dc4dc6effcd785de5b0c682b26c58c2dc02aa5f9a717deb112b58",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "expected_error": null,
+      "stderr_excerpt": "{\"funded_wei\":\"100000000000000000000\",\"id\":\"0x561a8219870affb1d560634f1d1ae37fa6dfc622:0\",\"state\":\"FUNDED\"}"
+    },
+    {
+      "label": "adversarial-tampered-vector-S0",
+      "method": "distribute",
+      "args": [
+        "0x561a8219870affb1d560634f1d1ae37fa6dfc622:0",
+        "[\"49000000000000000000\",\"31000000000000000000\",\"20000000000000000000\"]"
+      ],
+      "sender": "0x561A8219870afFB1D560634f1D1ae37fa6DFC622",
+      "value_wei": "0",
+      "txHash": "0xed3c00e30a6c111982955013ba4af2ced65abd86eb2b4d53576c57c76eff571e",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "ERROR",
+      "expected_error": "DISTRIBUTION_MISMATCH",
+      "stderr_excerpt": "EXPECTED: DISTRIBUTION_MISMATCH"
+    },
+    {
+      "label": "distribute-S0-good",
+      "method": "distribute",
+      "args": [
+        "0x561a8219870affb1d560634f1d1ae37fa6dfc622:0",
+        "[\"50000000000000000000\",\"30000000000000000000\",\"20000000000000000000\"]"
+      ],
+      "sender": "0x561A8219870afFB1D560634f1D1ae37fa6DFC622",
+      "value_wei": "0",
+      "txHash": "0x954040874df519e41631eb5cd6b681260116b9b5ab520ea3351d4de35e27194d",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "expected_error": null,
+      "stderr_excerpt": "{\"distribution_wei\":[\"50000000000000000000\",\"30000000000000000000\",\"20000000000000000000\"],\"id\":\"0x561a8219870affb1d560634f1d1ae37fa6dfc622:0\",\"remainder_to\":\"0xdac94b00b4dcb97b442afa542d4449a1b32caf39\",\"remainder_wei\":\"0\",\"state\":\"DISTRIBUTED\",\"total_wei\":\"100000000000000000000\"}"
+    },
+    {
+      "label": "create-S1-1-1-1",
+      "method": "create_split",
+      "args": [
+        "[\"0xdac94b00b4dcb97b442afa542d4449a1b32caf39\",\"0xee166e804f87af742511479ca34499560cc98ffe\",\"0xdd349f737f84f48de34ba1278ce960d88be684ca\"]",
+        "[1,1,1]"
+      ],
+      "sender": "0x561A8219870afFB1D560634f1D1ae37fa6DFC622",
+      "value_wei": "0",
+      "txHash": "0x641c020dc4450bf1f7a5ca1f19336a814c8020a7211d5aa31b48178d0875a86c",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "expected_error": null,
+      "stderr_excerpt": "0x561a8219870affb1d560634f1d1ae37fa6dfc622:1"
+    },
+    {
+      "label": "fund-S1-100-GEN",
+      "method": "fund",
+      "args": [
+        "0x561a8219870affb1d560634f1d1ae37fa6dfc622:1"
+      ],
+      "sender": "0x561A8219870afFB1D560634f1D1ae37fa6DFC622",
+      "value_wei": "100000000000000000000",
+      "txHash": "0xe6f0977418f966155a90d6839fe63e29b720300f037106f26771f0922c48565d",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "expected_error": null,
+      "stderr_excerpt": "{\"funded_wei\":\"100000000000000000000\",\"id\":\"0x561a8219870affb1d560634f1d1ae37fa6dfc622:1\",\"state\":\"FUNDED\"}"
+    },
+    {
+      "label": "distribute-S1-good-remainder",
+      "method": "distribute",
+      "args": [
+        "0x561a8219870affb1d560634f1d1ae37fa6dfc622:1",
+        "[\"33333333333333333334\",\"33333333333333333333\",\"33333333333333333333\"]"
+      ],
+      "sender": "0x561A8219870afFB1D560634f1D1ae37fa6DFC622",
+      "value_wei": "0",
+      "txHash": "0xb363b1c58657d5dd3b293fbddb968891b1714b39db8819d0415c1876f9b25f1e",
+      "receiptStatus": "FINALIZED",
+      "consensus": "MAJORITY_AGREE",
+      "execution": "SUCCESS",
+      "expected_error": null,
+      "stderr_excerpt": "{\"distribution_wei\":[\"33333333333333333334\",\"33333333333333333333\",\"33333333333333333333\"],\"id\":\"0x561a8219870affb1d560634f1d1ae37fa6dfc622:1\",\"remainder_to\":\"0xdac94b00b4dcb97b442afa542d4449a1b32caf39\",\"remainder_wei\":\"1\",\"state\":\"DISTRIBUTED\",\"total_wei\":\"100000000000000000000\"}"
+    }
+  ],
+  "finalReadbacks": {
+    "splits": [
+      {
+        "beneficiaries": [
+          "0xdac94b00b4dcb97b442afa542d4449a1b32caf39",
+          "0xee166e804f87af742511479ca34499560cc98ffe",
+          "0xdd349f737f84f48de34ba1278ce960d88be684ca"
+        ],
+        "distribution_wei": [
+          "50000000000000000000",
+          "30000000000000000000",
+          "20000000000000000000"
+        ],
+        "funded_wei": "100000000000000000000",
+        "id": "0x561a8219870affb1d560634f1d1ae37fa6dfc622:0",
+        "owner": "0x561a8219870affb1d560634f1d1ae37fa6dfc622",
+        "remainder_to": "0xdac94b00b4dcb97b442afa542d4449a1b32caf39",
+        "remainder_wei": "0",
+        "shares": [
+          50,
+          30,
+          20
+        ],
+        "state": "DISTRIBUTED",
+        "total_shares": 100
+      },
+      {
+        "beneficiaries": [
+          "0xdac94b00b4dcb97b442afa542d4449a1b32caf39",
+          "0xee166e804f87af742511479ca34499560cc98ffe",
+          "0xdd349f737f84f48de34ba1278ce960d88be684ca"
+        ],
+        "distribution_wei": [
+          "33333333333333333334",
+          "33333333333333333333",
+          "33333333333333333333"
+        ],
+        "funded_wei": "100000000000000000000",
+        "id": "0x561a8219870affb1d560634f1d1ae37fa6dfc622:1",
+        "owner": "0x561a8219870affb1d560634f1d1ae37fa6dfc622",
+        "remainder_to": "0xdac94b00b4dcb97b442afa542d4449a1b32caf39",
+        "remainder_wei": "1",
+        "shares": [
+          1,
+          1,
+          1
+        ],
+        "state": "DISTRIBUTED",
+        "total_shares": 3
+      }
+    ],
+    "totals": {
+      "contract_balance_wei": "0",
+      "invariant_ok": true,
+      "total_distributed_wei": "200000000000000000000",
+      "total_received_wei": "200000000000000000000"
+    },
+    "contractBalanceWei": "0",
+    "eoaBalancesWei": {
+      "creator": "9800000000000000000000",
+      "a": "10083333333333333333334",
+      "b": "10063333333333333333333",
+      "c": "10053333333333333333333"
+    },
+    "expectedEoaBalancesWei": {
+      "creator": "9800000000000000000000",
+      "a": "10083333333333333333334",
+      "b": "10063333333333333333333",
+      "c": "10053333333333333333333"
+    },
+    "readBackAt": "2026-11-10T15:44:52.425Z"
+  },
+  "invariant": {
+    "received_wei": "200000000000000000000",
+    "distributed_wei": "200000000000000000000",
+    "contract_balance_wei": "0",
+    "invariant_ok": true,
+    "in_equals_out": true
+  },
+  "generatedAt": "2026-11-10T15:44:52.425Z"
+}

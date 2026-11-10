@@ -1,0 +1,1 @@
+{"dependencies":{"genlayer-js":"1.1.8"},"name":"fixed-split-primitive","private":true,"scripts":{"deploy":"node scripts/deploy.mjs","flow":"node scripts/flow.mjs","test":"python3 tests/test_fixed_split.py","verify":"node scripts/verify.mjs"},"type":"module","version":"1.0.0"}
